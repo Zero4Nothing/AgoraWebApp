@@ -1,0 +1,12 @@
+.player {
+    width: auto;
+    height: 160px;
+}
+
+.fa {
+    font-size: 20px !important;
+}
+
+.UI_Buttons {
+    z-index: 1;
+}

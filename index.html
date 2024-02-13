@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--BootStrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--Icon Library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Agora LiveStream Web App</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center p-3">
+        <div>
+          <h2>Agora Live User</h2>
+          <div>
+            <div class="col-12">
+              <p>Local User</p>
+
+              <div id="local-user" class="player">
+                <p id="local-user-stream"></p>
+                <div
+                  class="UI_Buttons d-flex justify-content-end position-relative"
+                >
+                  <div class="d-flex position-absolute mt-2">
+                    <i
+                      class="fa videoCamerIcon p-2 mx-1 bg-primary rounded shadow fa-video-camera"
+                      aria-hidden="true"
+                    ></i>
+                    <i
+                      class="fa microPhoneIcon p-2 mx-1 bg-primary rounded shadow fa-microphone"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <p>Remote User</p>
+              <div id="remote-user" class="player"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 d-flex justify-content-center p-3">
+        <div>
+          <h2>Agora Input Form</h2>
+          <div>
+            <form id="inputForm" action="">
+              <input
+                type="text"
+                name="appId"
+                id="appId"
+                class="form-control m-1 shadow"
+                placeholder="Enter Agora App ID"
+              />
+              <input
+                type="text"
+                name="channel"
+                id="channel"
+                class="form-control m-1 shadow"
+                placeholder="Enter Agora Channel"
+              />
+              <input
+                type="text"
+                name="token"
+                id="token"
+                class="form-control m-1 shadow"
+                placeholder="Enter Agora token(Optional)"
+              />
+            </form>
+            <div class="row d-flex justify-content-around mt-3" id="bottomBox">
+              <input
+                type="submit"
+                value="Join"
+                id="Join"
+                class="btn btn-primary form-control w-25 btn-sm shadow col-6"
+              />
+              <input
+                type="submit"
+                value="leave"
+                id="Leave"
+                class="btn btn-primary form-control w-25 btn-sm shadow col-6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/AgoraRTC_N-4.11.0.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/helper.js"></script>
+  </body>
+</html>
